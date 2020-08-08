@@ -575,13 +575,13 @@ let g:quickrun#default_config = {
 \           executable('tsc') ? 'typescript/tsc' : '',
 \ },
 \ 'typescript/ts-node': {
-\   'command': 'ts-node',
+\   'command': 'yarn ts-node',
 \   'cmdopt': '--compiler-options ''{"target": "es2015"}''',
 \   'tempfile': '%{tempname()}.ts',
 \   'exec': '%c %o %s',
 \ },
 \ 'typescript/tsc': {
-\   'command': 'tsc',
+\   'command': 'yarn tsc',
 \   'exec': ['%c --target es5 --module commonjs %o %s', 'node %s:r.js'],
 \   'tempfile': '%{tempname()}.ts',
 \   'hook/sweep/files': ['%S:p:r.js'],
